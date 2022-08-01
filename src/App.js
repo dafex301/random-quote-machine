@@ -53,11 +53,11 @@ function App() {
   '&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button'
   return (
     <div className={"flex flex-col justify-center items-center h-screen w-screen transition-all duration-1000 " + colors[index]}>
-        <div id="quote-box" className='bg-white w-[600px] rounded-lg shadow-lg p-10'>
+        <div id="quote-box" className='bg-white w-80 sm:w-[600px] rounded-lg shadow-lg p-10'>
           <div id="text" className=''>
-            <p className={'transition-all duration-1000 text-3xl text-center '+ textColors[index] + ' ' + opacity}>
+            <p className={'transition-all duration-1000 text-2xl md:text-3xl text-center '+ textColors[index] + ' ' + opacity}>
               <span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className={"bi bi-quote h-7 inline mr-1 transition-all duration-1000 " + textColors[index]} viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className={"bi bi-quote h-6 md:h-7 inline mr-1 transition-all duration-1000 " + textColors[index]} viewBox="0 0 16 16">
                 <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
               </svg> 
               </span>
@@ -65,19 +65,19 @@ function App() {
             </p>
           </div>
           <div id="author" className="flex justify-end mt-8">
-            <p className={textColors[index] + " text-lg transition-all duration-1000 " + opacity}>- {author}</p>
+            <p className={textColors[index] + " sm:text-sm md:text-lg transition-all duration-1000 " + opacity}>- {author}</p>
           </div>
           <div className='flex justify-between mt-8'>  
-            <div className='flex gap-3 text-white text-2xl'>
+            <div className='flex gap-1 md:gap-3 text-white text-2xl'>
               <a href={tweetUrl} target='_blank' id="tweet-quote" rel="noreferrer">
-                <i className={`fa fa-twitter py-2 px-3 rounded-md transition-all duration-1000 ${colors[index]} hover:scale-105 hover:animate-pulse`}></i>
+                <i className={`fa fa-twitter py-1 px-2 md:py-2 md:px-3 rounded-md transition-all duration-1000 ${colors[index]} hover:scale-105 hover:animate-pulse`}></i>
               </a>
               <a href={pathUrl} id='tumblr-quote' target='_blank' rel='noreferrer'>
-                <i className={`fa fa-tumblr py-2 px-4 rounded-md transition-all duration-1000 ${colors[index]} hover:scale-105 hover:animate-pulse`}></i>
+                <i className={`fa fa-tumblr py-1 px-3 md:py-2 md:px-4 rounded-md transition-all duration-1000 ${colors[index]} hover:scale-105 hover:animate-pulse`}></i>
               </a>
             </div>
             <button id="new-quote" 
-            className={colors[index] + ' py-2 px-4 shadow-md rounded-lg text-white hover:animate-pulse hover:scale-105 transition-all duration-1000'}
+            className={colors[index] + ' py-1 px-3 sm:py-2 sm:px-4 shadow-md rounded-lg text-white hover:animate-pulse hover:scale-105 transition-all duration-1000'}
             onClick={handleClick}>
               New quote!
             </button>
